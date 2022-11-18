@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easy_flip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flipOnTouch="true"
+        app:flipEnabled="true"
+        app:flipDuration="400"
+        app:flipType="vertical"
+        app:flipFrom="back"
+        app:autoFlipBack="false">
+
+
+        <!-- Back Layout Goes Here -->
+        <include layout="@layout/flash_card_layout_back"
+            android:id="@+id/back_side"
+            />
+
+        <!-- Front Layout Goes Here -->
+        <include layout="@layout/flash_card_layout_front"
+            android:id="@+id/front_side"
+            />
+
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+</LinearLayout>
