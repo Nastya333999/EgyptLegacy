@@ -44,8 +44,6 @@ class FirstActivity : AppCompatActivity() {
         }
 
         viewModel.isNotADB.observe(this) {
-
-            Log.e("isADB", it)
             if (it == "true") {
                 viewModel.init(this)
             } else if (it == "false") {
